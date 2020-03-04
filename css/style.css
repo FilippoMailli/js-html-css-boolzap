@@ -49,7 +49,6 @@
     float: left;
     height: 100%;
     width: 35%;
-    background-color: blue;
     border-right: 1px solid #dadbd3;
 }
 
@@ -57,7 +56,7 @@
     float: left;
     height: 100%;
     width: 65%;
-    background-color: yellow;
+    background-color: #ededed;
 }
 
 .header-left {
@@ -152,4 +151,27 @@ p {
     width: 100%;
     border: none;
     padding-left: 10px;
+}
+
+.profilo-left {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.profilo-amico {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+}
+
+.profilo-amico img {
+    padding-left: 10px;
+}
+
+.testo-amico {
+    margin-right: 40px;
 }
