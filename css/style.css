@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .clearfix::after {
@@ -14,6 +15,9 @@
     height: 100vh;
     width: 100vw;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sfondo {
@@ -34,13 +38,118 @@
 
 .corpo-app {
     position: absolute;
-    top: 5%;
-    left: 15%;
-    height: 90%;
-    width: 70%;
+    top: 18px;
+    height: calc(100% - 36px);
+    width: 1200px;
     background-color: white;
-    border: 1px solid #dadbd3;
-    padding: 3px;
     box-shadow: 0 0 7px 1px rgba(0,0,0,0.3);
+}
 
+.left-corpo {
+    float: left;
+    height: 100%;
+    width: 35%;
+    background-color: blue;
+    border-right: 1px solid #dadbd3;
+}
+
+.right-corpo {
+    float: left;
+    height: 100%;
+    width: 65%;
+    background-color: yellow;
+}
+
+.header-left {
+    height: 25%;
+    width: 100%;
+}
+
+.profilo-personale {
+    height: 40%;
+    width: 100%;
+    background-color: #ededed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.barra-notifiche {
+    height: 40%;
+    width: 100%;
+    background-color: #99dffc;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.barra-ricerca {
+    height: 20%;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ededed;
+    color: #7c8386;
+}
+
+img {
+    height: 70px;
+}
+
+.icone-profilo-personale i {
+    color: #bababa;
+    font-size: 30px;
+    padding-right: 20px;
+}
+
+.bell-circle-background {
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bell-circle-background i {
+    font-size: 30px;
+    color: #99dffc;
+}
+
+.text-notifiche {
+    margin-left: 10px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+p {
+    font-size:  14px;
+}
+
+.text-notifiche p {
+    color: #7c8386;
+    text-decoration: underline;
+}
+
+.barra-ricerca-fusione {
+    background-color: white;
+    border-radius: 18px;
+    height: 30px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+#search-bar {
+    width: 100%;
+    border: none;
+    padding-left: 10px;
 }
