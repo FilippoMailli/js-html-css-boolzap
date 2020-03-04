@@ -21,8 +21,8 @@
 }
 
 .sfondo {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
 }
 
 .green-bar {
@@ -50,6 +50,7 @@
     height: 100%;
     width: 35%;
     border-right: 1px solid #dadbd3;
+    overflow: auto;
 }
 
 .right-corpo {
@@ -59,13 +60,8 @@
     background-color: #ededed;
 }
 
-.header-left {
-    height: 25%;
-    width: 100%;
-}
-
 .profilo-personale {
-    height: 40%;
+    height: 95px;
     width: 100%;
     background-color: #ededed;
     display: flex;
@@ -75,7 +71,7 @@
 }
 
 .barra-notifiche {
-    height: 40%;
+    height: 95px;
     width: 100%;
     background-color: #99dffc;
     padding: 10px;
@@ -85,7 +81,7 @@
 }
 
 .barra-ricerca {
-    height: 20%;
+    height: 50px;
     width: 100%;
     padding: 5px;
     display: flex;
@@ -101,13 +97,13 @@ img {
 
 .icone-profilo-personale i {
     color: #bababa;
-    font-size: 30px;
+    font-size: 25px;
     padding-right: 20px;
 }
 
 .bell-circle-background {
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
     background-color: white;
     border-radius: 50%;
     display: flex;
@@ -116,7 +112,7 @@ img {
 }
 
 .bell-circle-background i {
-    font-size: 30px;
+    font-size: 25px;
     color: #99dffc;
 }
 
@@ -157,7 +153,6 @@ p {
     height: 75%;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
 }
 
 .profilo-amico {
@@ -174,4 +169,93 @@ p {
 
 .testo-amico {
     margin-right: 40px;
+}
+
+.testo-amico p {
+    color: #7c8386;
+}
+
+.profilo-right {
+    color: #bababa;
+    display: flex;
+    align-items: center;
+}
+
+.foto-profilo-right {
+    margin: 10px;
+}
+
+.testo-profilo-right {
+    margin-right: 350px;
+    margin-left: 10px;
+}
+
+.testo-profilo-right h3 {
+    color: black;
+}
+
+.utilities-profilo-right i {
+    font-size: 25px;
+    padding-right: 20px;
+}
+
+.corpo-chat {
+    height: calc(100% - 160px);
+    background-image: url('../img/wallpaper.png');
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-weight: 600;
+}
+
+.messaggio-ricevuto {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 20px 30px;
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+
+}
+
+.messaggio-inviato {
+    background-color: #dafac2;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    margin: 30px;
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+#time-mex {
+    font-size: 12px;
+    color: #c4c7c8;
+    align-self: flex-end;
+}
+
+.barra-messaggio {
+    height: 65px;
+    color: #767e81;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.smile-face i,
+.mic-mex i {
+    font-size: 25px;
+}
+
+#mex-bar {
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    width: 650px;
+    padding: 15px;
 }
