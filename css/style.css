@@ -9,3 +9,38 @@
     clear: both;
     display: table;
 }
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.sfondo {
+    height: 100%;
+    width: 100%;
+}
+
+.green-bar {
+    height: 150px;
+    background-color: #009688;
+}
+
+.grey-background {
+    height: calc(100% - 150px);
+    width: 100%;
+    background-color: #dadbd3;
+}
+
+.corpo-app {
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    height: 90%;
+    width: 70%;
+    background-color: white;
+    border: 1px solid #dadbd3;
+    padding: 3px;
+    box-shadow: 0 0 7px 1px rgba(0,0,0,0.3);
+
+}
