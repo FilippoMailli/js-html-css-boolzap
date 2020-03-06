@@ -211,13 +211,14 @@ p {
 }
 
 .messaggio-ricevuto {
+    width: 200px;
     display: flex;
     flex-direction: column;
     background-color: white;
-    margin: 20px 30px;
+    margin: 10px 30px;
     padding: 10px;
-    width: 150px;
     border-radius: 10px;
+    word-wrap: break-word;
 
 }
 
@@ -270,6 +271,7 @@ p {
     color: black;
 }
 
-.template {
+.template,
+.template-ricevuto {
     display: none;
 }
