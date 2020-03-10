@@ -10,11 +10,9 @@ $(document).ready(function() {
 //     });
 
     $('#mex-bar').focus(function() {
-        $('#microfono-mex').toggleClass('no-active');
-        $('#invia-messaggio').toggleClass('no-active');
+        $('#invia-messaggio').toggleClass('fa fa-microphone fas fa-paper-plane');
     }).blur(function () {
-        $('#microfono-mex').toggleClass('no-active');
-        $('#invia-messaggio').toggleClass('no-active');
+        $('#invia-messaggio').toggleClass('fa fa-microphone fas fa-paper-plane');
     });
 
     $('#invia-messaggio').click(function() {

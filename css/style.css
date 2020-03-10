@@ -282,11 +282,3 @@ p {
 .template-ricevuto {
     display: none;
 }
-
-.active {
-    display: block;
-}
-
-.no-active {
-    display: none;
-}
