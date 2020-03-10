@@ -211,9 +211,12 @@ p {
 }
 
 .messaggio-ricevuto {
-    width: 200px;
+    min-width: 150px;
+    min-height: 50px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
+    align-self: flex-start;
     background-color: white;
     margin: 10px 30px;
     padding: 10px;
@@ -223,13 +226,15 @@ p {
 }
 
 .messaggio-inviato {
+    min-width: 150px;
+    min-height: 50px;
+    max-width: 300px;
     background-color: #dafac2;
     display: flex;
     flex-direction: column;
     align-self: flex-end;
     margin: 10px 30px;
     padding: 10px;
-    max-width: 300px;
     border-radius: 10px;
     word-wrap: break-word;
 }
@@ -263,15 +268,25 @@ p {
     padding: 15px;
 }
 
-#invia-messaggio:hover {
+#invia-messaggio:hover,
+#microfono-mex:hover {
     cursor: pointer;
 }
 
-#invia-messaggio:active {
+#invia-messaggio:active,
+#microfono-mex:active {
     color: black;
 }
 
 .template,
 .template-ricevuto {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.no-active {
     display: none;
 }
