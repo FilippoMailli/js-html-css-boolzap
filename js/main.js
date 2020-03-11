@@ -99,6 +99,14 @@ $(document).ready(function() {
         $(this).children('.info-messaggio').toggleClass('displayflex');
     });
 
+    $(document).on('click', '#cancella', function() {
+        $(this).closest('.messaggio-ricevuto').remove();
+    });
+
+    $(document).on('click', '#cancella', function() {
+        $(this).closest('.messaggio-inviato').remove();
+    });
+
 });
 
 
