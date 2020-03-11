@@ -8,7 +8,15 @@ $(document).ready(function() {
 //         $('.corpo-chat').append(messaggio);
 //         setTimeout(mexOuput, 1000);
 //     });
-
+//
+//
+//     function mexOuput() {
+//         var messaggioOut = $('.template-ricevuto .messaggio-ricevuto').clone();
+//         messaggioOut.children('.testo-ricevuto');
+//         messaggioOut.children('#time-mex').text(x);
+//         $('.corpo-chat').append(messaggioOut);
+//     };
+//
     $('#mex-bar').focus(function() {
         $('#invia-messaggio').toggleClass('fa fa-microphone fas fa-paper-plane');
     }).blur(function () {
@@ -43,7 +51,7 @@ $(document).ready(function() {
         templateMsg.children('.testo-messaggio').text(testoMessaggio);
         templateMsg.children('#time-mex').text(x);
         templateMsg.addClass(inviatoRicevuto);
-        $('.corpo-chat').append(templateMsg);
+        $('.corpo-chat.active').append(templateMsg);
     }
 
     function scroll() {
@@ -51,26 +59,17 @@ $(document).ready(function() {
         $('.corpo-chat').scrollTop(pixelScroll);
     }
 
-//
-//
-//     function mexOuput() {
-//         var messaggioOut = $('.template-ricevuto .messaggio-ricevuto').clone();
-//         messaggioOut.children('.testo-ricevuto');
-//         messaggioOut.children('#time-mex').text(x);
-//         $('.corpo-chat').append(messaggioOut);
-//     };
-//
-//     $('#search-bar').keyup(function(event) {
-//         var carattereFiltro = $(this).val().toLowerCase();
-//         $('.testo-amico h3').each(function() {
-//             if ($(this).text().toLowerCase().includes(carattereFiltro)) {
-//                 $(this).closest(".profilo-amico").show();
-//             } else {
-//                 $(this).closest(".profilo-amico").hide();
-//             }
-//         });
-//     });
-//
+    $('#search-bar').keyup(function(event) {
+        var carattereFiltro = $(this).val().toLowerCase();
+        $('.testo-amico h3').each(function() {
+            if ($(this).text().toLowerCase().includes(carattereFiltro)) {
+                $(this).closest(".profilo-amico").show();
+            } else {
+                $(this).closest(".profilo-amico").hide();
+            }
+        });
+    });
+
     var d = new Date();
     var minutes = d.getMinutes();
     var hours = d.getHours();
@@ -79,4 +78,30 @@ $(document).ready(function() {
     }
     var x = hours + "." + minutes;
 
+
+    $('.profilo-amico').click(function(){
+        $('.profilo-amico').removeClass('active');
+        $('.profilo-amico').css('background-color', 'white');
+        $(this).addClass('active');
+        var utenteData = $(this).data('conversazione');
+        $('.profilo-amico[data-conversazione="' + utenteData + '"]').css('background-color', '#ededed');
+        var chatCorrispondente = $('.corpo-chat[data-conversazione="' + utenteData + '"]');
+        $('.corpo-chat').removeClass('active');
+        chatCorrispondente.addClass('active');
+        var nomeContatto = $(this).find('.contact-name').text();
+        $('.nome-contatto-right').text(nomeContatto);
+        var srcContatto = $(this).find('.faccia-amico').children('img').attr('src');
+        $('#faccia-attiva').attr('src', srcContatto);
+    });
+
+    $('.corpo-chat').on('click', '#menu-tendina', function() {
+        $('.info-messaggio').not(this).children('#menu-tendina').removeClass('displayflex');
+        $(this).children('.info-messaggio').toggleClass('displayflex');
+    });
+
 });
+
+
+
+
+//

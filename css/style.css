@@ -199,11 +199,13 @@ p {
     padding-right: 20px;
 }
 
+
+
 .corpo-chat {
     height: calc(100% - 160px);
     background-image: url('../img/wallpaper.png');
     background-size: contain;
-    display: flex;
+    display: none;
     flex-direction: column;
     color: black;
     font-weight: 600;
@@ -281,4 +283,52 @@ p {
 .template,
 .template-ricevuto {
     display: none;
+}
+
+.profilo-amico:hover{
+    cursor: pointer;
+    background-color: #ededed;
+}
+
+
+.active {
+    display:flex;
+}
+
+.fas.fa-chevron-down:hover {
+    cursor: pointer;
+}
+
+.fas.fa-chevron-down {
+    align-self: flex-end;
+    font-size: 16px;
+    position: absolute;
+    color: #bababa;
+}
+
+
+.info-messaggio {
+    align-self: flex-end;
+    position: absolute;
+    right: 5px;
+    background-color: rgba(255,255,255,0.7);
+    padding: 10px;
+    height: 50px;
+    width: 150px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-messaggio:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.info-messaggio h3 {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.displayflex {
+    display: flex;
 }
