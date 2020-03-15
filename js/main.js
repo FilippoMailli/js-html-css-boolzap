@@ -1,22 +1,5 @@
 $(document).ready(function() {
-//     $('#invia-messaggio').click(function() {
-//         var messaggioInput = $('#mex-bar').val();
-//         $('#mex-bar').val('');
-//         var messaggio = $('.template .messaggio-inviato').clone();
-//         messaggio.children('.testo-messaggio').text(messaggioInput);
-//         messaggio.children('#time-mex').text(x);
-//         $('.corpo-chat').append(messaggio);
-//         setTimeout(mexOuput, 1000);
-//     });
-//
-//
-//     function mexOuput() {
-//         var messaggioOut = $('.template-ricevuto .messaggio-ricevuto').clone();
-//         messaggioOut.children('.testo-ricevuto');
-//         messaggioOut.children('#time-mex').text(x);
-//         $('.corpo-chat').append(messaggioOut);
-//     };
-//
+
     $('#mex-bar').focus(function() {
         $('#invia-messaggio').toggleClass('fa fa-microphone fas fa-paper-plane');
     }).blur(function () {
@@ -46,13 +29,13 @@ $(document).ready(function() {
         }
     }
 
-    function creaMessaggio(testoMessaggio, inviatoRicevuto) {
-        var templateMsg = $('.template .messaggio').clone();
-        templateMsg.children('.testo-messaggio').text(testoMessaggio);
-        templateMsg.children('#time-mex').text(x);
-        templateMsg.addClass(inviatoRicevuto);
-        $('.corpo-chat.active').append(templateMsg);
-    }
+    // function creaMessaggio(testoMessaggio, inviatoRicevuto) {
+    //     var templateMsg = $('.template .messaggio').clone();
+    //     templateMsg.children('.testo-messaggio').text(testoMessaggio);
+    //     templateMsg.children('#time-mex').text(x);
+    //     templateMsg.addClass(inviatoRicevuto);
+    //     $('.corpo-chat.active').append(templateMsg);
+    // }
 
     function scroll() {
         var pixelScroll = $('.corpo-chat').height();
@@ -107,9 +90,35 @@ $(document).ready(function() {
         $(this).closest('.messaggio-inviato').remove();
     });
 
+
+
+    // BoolzApp con Handlebars
+    // # RICORDA di linkare la libreria di handlebars
+    // #2 Costruiamo il template in HTML
+    // #Scelgo nel template dove inserire le variabili {{}}
+
+    var source = $('#messaggio-template').html();       //Clono il template messaggio
+    var template = Handlebars.compile(source);          //funzione standard di handlebars per il template clonato
+
+    function creaMessaggio(testoMexaggio, inviatoRicevuto) {
+        var datiMessaggio = {
+            testoMessaggio: testoMexaggio,
+            direzione: inviatoRicevuto
+        };
+
+        var templateMessaggio = template(datiMessaggio);
+        $('.corpo-chat.active').append(templateMessaggio);
+    }
+
+
+
+
+
+
+
+
+
+
+
 });
-
-
-
-
 //

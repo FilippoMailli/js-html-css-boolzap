@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
     </head>
     <body>
         <div class="container clearfix">
@@ -207,9 +208,8 @@
             </div>
         </div>
 
-        <div class="template">
+        <!-- <div class="template">
             <div class="messaggio clearfix">
-
                 <i id="menu-tendina" class="fas fa-chevron-down">
                     <div class="info-messaggio">
                         <h3 id="cancella">CANCELLA MESSAGGIO</h3>
@@ -218,8 +218,21 @@
                 <p class="testo-messaggio"></p>
                 <p id="time-mex"></p>
             </div>
+        </div> -->
 
-        </div>
+        <script id="messaggio-template" type="text/x-handlebars-template">
+
+            <div class="messaggio clearfix {{direzione}}">
+                <i id="menu-tendina" class="fas fa-chevron-down">
+                    <div class="info-messaggio">
+                        <h3 id="cancella">CANCELLA MESSAGGIO</h3>
+                    </div>
+                </i>
+                <p class="testo-messaggio">{{testoMessaggio}}</p>
+                <p id="time-mex"></p>
+            </div>
+
+        </script>
 
         <script src="js/main.js" charset="utf-8"></script>
     </body>
