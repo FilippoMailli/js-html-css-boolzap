@@ -46,7 +46,7 @@
                     </div>
                     <div class="profilo-left">
                         <div class="profilo-amico active" data-conversazione="0">
-                            <div class="faccia-amico">
+                            <!-- <div class="faccia-amico">
                                 <img src="img/avatar10.png" alt="">
                             </div>
                             <div class="testo-amico">
@@ -55,10 +55,10 @@
                             </div>
                             <div class="orario-messaggio-amico">
                                 <p>17.03</p>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="profilo-amico" data-conversazione="1">
-                            <div class="faccia-amico">
+                            <!-- <div class="faccia-amico">
                                 <img src="img/avatar2.png" alt="">
                             </div>
                             <div class="testo-amico">
@@ -67,10 +67,10 @@
                             </div>
                             <div class="orario-messaggio-amico">
                                 <p>17.03</p>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="profilo-amico" data-conversazione="2">
-                            <div class="faccia-amico">
+                            <!-- <div class="faccia-amico">
                                 <img src="img/avatar3.png" alt="">
                             </div>
                             <div class="testo-amico">
@@ -79,10 +79,10 @@
                             </div>
                             <div class="orario-messaggio-amico">
                                 <p>17.03</p>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="profilo-amico" data-conversazione="3">
-                            <div class="faccia-amico">
+                            <!-- <div class="faccia-amico">
                                 <img src="img/avatar4.png" alt="">
                             </div>
                             <div class="testo-amico">
@@ -91,10 +91,10 @@
                             </div>
                             <div class="orario-messaggio-amico">
                                 <p>17.03</p>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="profilo-amico" data-conversazione="4">
-                            <div class="faccia-amico">
+                            <!-- <div class="faccia-amico">
                                 <img src="img/avatar5.png" alt="">
                             </div>
                             <div class="testo-amico">
@@ -103,10 +103,10 @@
                             </div>
                             <div class="orario-messaggio-amico">
                                 <p>17.03</p>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="profilo-amico" data-conversazione="5">
-                            <div class="faccia-amico">
+                            <!-- <div class="faccia-amico">
                                 <img src="img/avatar6.png" alt="">
                             </div>
                             <div class="testo-amico">
@@ -115,10 +115,10 @@
                             </div>
                             <div class="orario-messaggio-amico">
                                 <p>17.03</p>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="profilo-amico" data-conversazione="6">
-                            <div class="faccia-amico">
+                            <!-- <div class="faccia-amico">
                                 <img src="img/avatar7.png" alt="">
                             </div>
                             <div class="testo-amico">
@@ -127,10 +127,10 @@
                             </div>
                             <div class="orario-messaggio-amico">
                                 <p>17.03</p>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="profilo-amico" data-conversazione="7">
-                            <div class="faccia-amico">
+                            <!-- <div class="faccia-amico">
                                 <img src="img/avatar8.png" alt="">
                             </div>
                             <div class="testo-amico">
@@ -139,10 +139,10 @@
                             </div>
                             <div class="orario-messaggio-amico">
                                 <p>17.03</p>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="profilo-amico" data-conversazione="8">
-                            <div class="faccia-amico">
+                            <!-- <div class="faccia-amico">
                                 <img src="img/avatar9.png" alt="">
                             </div>
                             <div class="testo-amico">
@@ -151,19 +151,7 @@
                             </div>
                             <div class="orario-messaggio-amico">
                                 <p>17.03</p>
-                            </div>
-                        </div>
-                        <div class="profilo-amico" data-conversazione="9">
-                            <div class="faccia-amico">
-                                <img src="img/avatar11.png" alt="">
-                            </div>
-                            <div class="testo-amico">
-                                <h3 class="contact-name">Giovanni</h3>
-                                <p>Non poteva essere altrimenti</p>
-                            </div>
-                            <div class="orario-messaggio-amico">
-                                <p>17.03</p>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -191,7 +179,6 @@
                     <div class="corpo-chat" data-conversazione="6"></div>
                     <div class="corpo-chat" data-conversazione="7"></div>
                     <div class="corpo-chat" data-conversazione="8"></div>
-                    <div class="corpo-chat" data-conversazione="9"></div>
                     <div class="barra-messaggio">
                         <div class="smile-face">
                             <i class="far fa-smile"></i>
@@ -230,6 +217,21 @@
                 </i>
                 <p class="testo-messaggio">{{testoMessaggio}}</p>
                 <p id="time-mex"></p>
+            </div>
+
+        </script>
+
+        <script id="rubrica-template" type="text/x-handlebars-template">
+
+            <div class="faccia-amico">
+                <img src="{{ubicazione}}" alt="">
+            </div>
+            <div class="testo-amico">
+                <h3 class="contact-name">{{nomeAmico}}</h3>
+                <p>Non poteva essere altrimenti</p>
+            </div>
+            <div class="orario-messaggio-amico">
+                <p>17.03</p>
             </div>
 
         </script>

@@ -110,10 +110,69 @@ $(document).ready(function() {
         $('.corpo-chat.active').append(templateMessaggio);
     }
 
+    var sourceProfilo = $('#rubrica-template').html();
+    var templateRubrica = Handlebars.compile(sourceProfilo);
+
+    var rubrica = {
+        c0: {
+                nomeContattoAmico: 'Pierpaolo',
+                immagineAmico: 'img/avatar10.png'
+            },
+        c1: {
+                nomeContattoAmico: 'Samuele',
+                immagineAmico: 'img/avatar2.png'
+            },
+        c2: {
+                nomeContattoAmico: 'Alessandro B.',
+                immagineAmico: 'img/avatar3.png'
+            },
+        c3: {
+                nomeContattoAmico: 'Alessandro L.',
+                immagineAmico: 'img/avatar4.png'
+            },
+        c4: {
+                nomeContattoAmico: 'Anna M.',
+                immagineAmico: 'img/avatar5.png'
+            },
+        c5: {
+                nomeContattoAmico: 'Stefania A.',
+                immagineAmico: 'img/avatar6.png'
+            },
+        c6: {
+                nomeContattoAmico: 'Fabio S.',
+                immagineAmico: 'img/avatar7.png'
+            },
+        c7: {
+                nomeContattoAmico: 'Stefano',
+                immagineAmico: 'img/avatar8.png'
+            },
+        c8: {
+                nomeContattoAmico: 'Filippo',
+                immagineAmico: 'img/avatar9.png'
+            },
+
+    }
+
+    for( var convKey in rubrica) {
+        var numeroConversazione = convKey[1];
+        var datiContatto = rubrica[convKey];
+        var nomeContattoAmico = datiContatto.nomeContattoAmico;
+        var immagineAmico = datiContatto.immagineAmico;
+        var selettoreConv = $('.profilo-amico[data-conversazione="' + numeroConversazione + '"]');
+        popolaRubrica(nomeContattoAmico, immagineAmico, selettoreConv);
+    }
 
 
 
+    function popolaRubrica(testoAmico, ubicazioneAmico, selettoreConv) {
+        var datiRubrica = {
+            ubicazione: ubicazioneAmico,
+            nomeAmico: testoAmico
+        };
 
+        var templateDatiRubrica = templateRubrica(datiRubrica);
+        $(selettoreConv).append(templateDatiRubrica);
+    }
 
 
 
